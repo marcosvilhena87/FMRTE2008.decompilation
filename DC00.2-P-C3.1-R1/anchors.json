@@ -1,0 +1,22 @@
+{
+  "catalog_fixture_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+  "rows_sha256": "33521db55f2605865f28258278a2d4116b7de03ec034e78ec593192231e55bbe",
+  "opaque": {"path": "opaque.txt", "size": 42, "sha256": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3"},
+  "baseline_sha256": "4c0e887d7ac6ea7a90f2c5462f1cd908a12f024f416b394378d1961b1000463e",
+  "protocol_sha256": "d54cd56fcfa355530af97f7544fd57922f3be9c7e2bd24aa7e69f66b5a224e0a",
+  "toolchain_sha256": "37d2a3543f5bbeda17e43c5daac9676da22fcdfac6d809385b25a36efc6bbfb3",
+  "dependencies": {"Synthetic.Dependency": {"version": "1.0.0.0", "sha256": "1211275d06194a9500297bf52e9a69ffa6cb5f5f6399997514769e9251f604b0"}},
+  "manifest_sha256": "236aa091bde8feb0d8f70a87ae4f1ad8f22541955ac2d7fe2a3bae8aa9cdec95",
+  "source_link": {
+    "path": "Synthetic.cs",
+    "sha256": "590d1f478a8e90111663896d3b69485b02197ba70660596cac3760fd5ffbfebe",
+    "start": 197,
+    "end": 245,
+    "owner": "PreparationFixtures.Sample",
+    "signature": "int Same(int)",
+    "encoding": "utf-8",
+    "kind": "direct",
+    "engine_evidence": "3206e027ccb63c31eee4f018ada49470167c7ae26005c07208874a89833a6839"
+  },
+  "other_extent": [254, 304]
+}

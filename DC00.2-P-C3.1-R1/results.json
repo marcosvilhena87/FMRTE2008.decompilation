@@ -1,0 +1,1627 @@
+{
+  "audit": {
+    "limits": [
+      "Only matching CPython audit events in this interpreter are intercepted.",
+      "The hook starts at runner entry, after interpreter startup and standard-library imports.",
+      "Filesystem access and nonmatching events are outside this policy.",
+      "Native code and unaudited actions require external containment and observation.",
+      "A clean event log covers the observed policy only."
+    ],
+    "prefixes": [
+      "socket.",
+      "os.exec",
+      "os.fork",
+      "os.posix_spawn",
+      "os.spawn",
+      "os.system",
+      "subprocess."
+    ],
+    "probe_events": [
+      "socket.__new__",
+      "os.exec",
+      "os.fork",
+      "os.posix_spawn",
+      "os.spawn",
+      "os.system",
+      "subprocess.Popen"
+    ],
+    "probes": [
+      {
+        "event": "socket.__new__",
+        "passed": true,
+        "probe": "api"
+      },
+      {
+        "event": "os.exec",
+        "passed": true,
+        "probe": "synthetic"
+      },
+      {
+        "event": "os.fork",
+        "passed": true,
+        "probe": "synthetic"
+      },
+      {
+        "event": "os.posix_spawn",
+        "passed": true,
+        "probe": "synthetic"
+      },
+      {
+        "event": "os.spawn",
+        "passed": true,
+        "probe": "synthetic"
+      },
+      {
+        "event": "os.system",
+        "passed": true,
+        "probe": "synthetic"
+      },
+      {
+        "event": "subprocess.Popen",
+        "passed": true,
+        "probe": "synthetic"
+      },
+      {
+        "event": "open",
+        "passed": true,
+        "probe": "api"
+      }
+    ],
+    "registration_verified": true,
+    "unexpected_denials": []
+  },
+  "base_head": "92756b5d12652a9b784ff50ea7bb70e1c1ded577",
+  "cases_executed": 17,
+  "catalog_modes": {
+    "external_blocked": 29,
+    "legacy_data": 17,
+    "signed_gate_required": 7,
+    "structural": 4
+  },
+  "concurrent_controls": [
+    {
+      "classified_code": 10,
+      "concurrent": true,
+      "expected_codes": [
+        10,
+        13
+      ],
+      "expected_priority": 10,
+      "faults": [
+        {
+          "blocked_events": [],
+          "id": "T01.01",
+          "observed_code": 10,
+          "reason": "identity",
+          "trace": {
+            "anchor_sha256": "33521db55f2605865f28258278a2d4116b7de03ec034e78ec593192231e55bbe",
+            "parser_calls": 0,
+            "sha256": "f699ed44ab53c194314338c66e0ae2eb555302e00b27fcc0513d7f1f05083ccf"
+          }
+        },
+        {
+          "blocked_events": [],
+          "id": "T05.01",
+          "observed_code": 13,
+          "reason": "dependency inventory",
+          "trace": {
+            "observed": {},
+            "trusted": {
+              "Synthetic.Dependency": {
+                "sha256": "1211275d06194a9500297bf52e9a69ffa6cb5f5f6399997514769e9251f604b0",
+                "version": "1.0.0.0"
+              }
+            }
+          }
+        }
+      ],
+      "joint_observation": [
+        {
+          "blocked_events": [],
+          "id": "T01.01",
+          "observed_code": 10,
+          "reason": "identity",
+          "trace": {
+            "anchor_sha256": "33521db55f2605865f28258278a2d4116b7de03ec034e78ec593192231e55bbe",
+            "parser_calls": 0,
+            "sha256": "f699ed44ab53c194314338c66e0ae2eb555302e00b27fcc0513d7f1f05083ccf"
+          }
+        },
+        {
+          "blocked_events": [],
+          "id": "T05.01",
+          "observed_code": 13,
+          "reason": "dependency inventory",
+          "trace": {
+            "observed": {},
+            "trusted": {
+              "Synthetic.Dependency": {
+                "sha256": "1211275d06194a9500297bf52e9a69ffa6cb5f5f6399997514769e9251f604b0",
+                "version": "1.0.0.0"
+              }
+            }
+          }
+        }
+      ],
+      "passed": true,
+      "single_mutation_accepted": false
+    },
+    {
+      "classified_code": 10,
+      "concurrent": true,
+      "expected_codes": [
+        13,
+        10
+      ],
+      "expected_priority": 10,
+      "faults": [
+        {
+          "blocked_events": [],
+          "id": "T05.01",
+          "observed_code": 13,
+          "reason": "dependency inventory",
+          "trace": {
+            "observed": {},
+            "trusted": {
+              "Synthetic.Dependency": {
+                "sha256": "1211275d06194a9500297bf52e9a69ffa6cb5f5f6399997514769e9251f604b0",
+                "version": "1.0.0.0"
+              }
+            }
+          }
+        },
+        {
+          "blocked_events": [],
+          "id": "T01.01",
+          "observed_code": 10,
+          "reason": "identity",
+          "trace": {
+            "anchor_sha256": "33521db55f2605865f28258278a2d4116b7de03ec034e78ec593192231e55bbe",
+            "parser_calls": 0,
+            "sha256": "f699ed44ab53c194314338c66e0ae2eb555302e00b27fcc0513d7f1f05083ccf"
+          }
+        }
+      ],
+      "joint_observation": [
+        {
+          "blocked_events": [],
+          "id": "T05.01",
+          "observed_code": 13,
+          "reason": "dependency inventory",
+          "trace": {
+            "observed": {},
+            "trusted": {
+              "Synthetic.Dependency": {
+                "sha256": "1211275d06194a9500297bf52e9a69ffa6cb5f5f6399997514769e9251f604b0",
+                "version": "1.0.0.0"
+              }
+            }
+          }
+        },
+        {
+          "blocked_events": [],
+          "id": "T01.01",
+          "observed_code": 10,
+          "reason": "identity",
+          "trace": {
+            "anchor_sha256": "33521db55f2605865f28258278a2d4116b7de03ec034e78ec593192231e55bbe",
+            "parser_calls": 0,
+            "sha256": "f699ed44ab53c194314338c66e0ae2eb555302e00b27fcc0513d7f1f05083ccf"
+          }
+        }
+      ],
+      "passed": true,
+      "single_mutation_accepted": false
+    },
+    {
+      "classified_code": 12,
+      "concurrent": true,
+      "expected_codes": [
+        12,
+        12
+      ],
+      "expected_priority": 12,
+      "faults": [
+        {
+          "blocked_events": [],
+          "id": "T06.01",
+          "observed_code": 12,
+          "reason": "signature rejected",
+          "trace": {
+            "anchor_sha256": "236aa091bde8feb0d8f70a87ae4f1ad8f22541955ac2d7fe2a3bae8aa9cdec95",
+            "artifact_digests": {
+              "opaque.txt": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3"
+            },
+            "available_artifacts": [
+              "opaque.txt"
+            ],
+            "manifest_sha256": "236aa091bde8feb0d8f70a87ae4f1ad8f22541955ac2d7fe2a3bae8aa9cdec95",
+            "signature_valid": false
+          }
+        },
+        {
+          "blocked_events": [],
+          "id": "T06.04",
+          "observed_code": 12,
+          "reason": "artifact set",
+          "trace": {
+            "anchor_sha256": "236aa091bde8feb0d8f70a87ae4f1ad8f22541955ac2d7fe2a3bae8aa9cdec95",
+            "artifact_digests": {},
+            "available_artifacts": [],
+            "manifest_sha256": "236aa091bde8feb0d8f70a87ae4f1ad8f22541955ac2d7fe2a3bae8aa9cdec95",
+            "signature_valid": true
+          }
+        }
+      ],
+      "joint_observation": {
+        "code": 12,
+        "reason": "signature rejected",
+        "trace": {
+          "anchor_sha256": "236aa091bde8feb0d8f70a87ae4f1ad8f22541955ac2d7fe2a3bae8aa9cdec95",
+          "artifact_digests": {},
+          "available_artifacts": [],
+          "manifest_sha256": "236aa091bde8feb0d8f70a87ae4f1ad8f22541955ac2d7fe2a3bae8aa9cdec95",
+          "signature_valid": false
+        }
+      },
+      "passed": true,
+      "single_mutation_accepted": false
+    }
+  ],
+  "controls": [
+    {
+      "blocked_events": [],
+      "expected_code": 0,
+      "id": "T01.01",
+      "observed_code": 0,
+      "passed": true,
+      "reason": null,
+      "trace": {
+        "anchor_sha256": "33521db55f2605865f28258278a2d4116b7de03ec034e78ec593192231e55bbe",
+        "parser_calls": 1,
+        "sha256": "33521db55f2605865f28258278a2d4116b7de03ec034e78ec593192231e55bbe"
+      },
+      "variant": "positive"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 10,
+      "id": "T01.01",
+      "observed_code": 10,
+      "passed": true,
+      "reason": "identity",
+      "trace": {
+        "anchor_sha256": "33521db55f2605865f28258278a2d4116b7de03ec034e78ec593192231e55bbe",
+        "parser_calls": 0,
+        "sha256": "f699ed44ab53c194314338c66e0ae2eb555302e00b27fcc0513d7f1f05083ccf"
+      },
+      "variant": "mutation"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 0,
+      "id": "T02.01",
+      "observed_code": 0,
+      "passed": true,
+      "reason": null,
+      "trace": {
+        "duplicates": [],
+        "missing": [],
+        "unexpected": []
+      },
+      "variant": "positive"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 11,
+      "id": "T02.01",
+      "observed_code": 11,
+      "passed": true,
+      "reason": "coverage or multiplicity",
+      "trace": {
+        "duplicates": [],
+        "missing": [
+          [
+            "synthetic",
+            6,
+            3
+          ]
+        ],
+        "unexpected": []
+      },
+      "variant": "mutation"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 0,
+      "id": "T02.02",
+      "observed_code": 0,
+      "passed": true,
+      "reason": null,
+      "trace": {
+        "duplicates": [],
+        "missing": [],
+        "unexpected": []
+      },
+      "variant": "positive"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 11,
+      "id": "T02.02",
+      "observed_code": 11,
+      "passed": true,
+      "reason": "coverage or multiplicity",
+      "trace": {
+        "duplicates": [],
+        "missing": [],
+        "unexpected": [
+          [
+            "synthetic",
+            6,
+            4
+          ]
+        ]
+      },
+      "variant": "mutation"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 0,
+      "id": "T03.01",
+      "observed_code": 0,
+      "passed": true,
+      "reason": null,
+      "trace": {
+        "duplicates": [],
+        "missing": [],
+        "unexpected": []
+      },
+      "variant": "positive"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 11,
+      "id": "T03.01",
+      "observed_code": 11,
+      "passed": true,
+      "reason": "coverage or multiplicity",
+      "trace": {
+        "duplicates": [
+          [
+            [
+              "synthetic",
+              6,
+              2
+            ],
+            2
+          ]
+        ],
+        "missing": [
+          [
+            "synthetic",
+            6,
+            3
+          ]
+        ],
+        "unexpected": []
+      },
+      "variant": "mutation"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 0,
+      "id": "T05.01",
+      "observed_code": 0,
+      "passed": true,
+      "reason": null,
+      "trace": {
+        "observed": {
+          "Synthetic.Dependency": {
+            "sha256": "1211275d06194a9500297bf52e9a69ffa6cb5f5f6399997514769e9251f604b0",
+            "version": "1.0.0.0"
+          }
+        },
+        "trusted": {
+          "Synthetic.Dependency": {
+            "sha256": "1211275d06194a9500297bf52e9a69ffa6cb5f5f6399997514769e9251f604b0",
+            "version": "1.0.0.0"
+          }
+        }
+      },
+      "variant": "positive"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 13,
+      "id": "T05.01",
+      "observed_code": 13,
+      "passed": true,
+      "reason": "dependency inventory",
+      "trace": {
+        "observed": {},
+        "trusted": {
+          "Synthetic.Dependency": {
+            "sha256": "1211275d06194a9500297bf52e9a69ffa6cb5f5f6399997514769e9251f604b0",
+            "version": "1.0.0.0"
+          }
+        }
+      },
+      "variant": "mutation"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 0,
+      "id": "T05.02",
+      "observed_code": 0,
+      "passed": true,
+      "reason": null,
+      "trace": {
+        "observed": {
+          "Synthetic.Dependency": {
+            "sha256": "1211275d06194a9500297bf52e9a69ffa6cb5f5f6399997514769e9251f604b0",
+            "version": "1.0.0.0"
+          }
+        },
+        "trusted": {
+          "Synthetic.Dependency": {
+            "sha256": "1211275d06194a9500297bf52e9a69ffa6cb5f5f6399997514769e9251f604b0",
+            "version": "1.0.0.0"
+          }
+        }
+      },
+      "variant": "positive"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 13,
+      "id": "T05.02",
+      "observed_code": 13,
+      "passed": true,
+      "reason": "dependency inventory",
+      "trace": {
+        "observed": {
+          "Synthetic.Dependency": {
+            "sha256": "e0cb9511afd9705a3fb9449711b0378cb86bebb02aa206f2949fad5e44b261a4",
+            "version": "1.0.0.0"
+          }
+        },
+        "trusted": {
+          "Synthetic.Dependency": {
+            "sha256": "1211275d06194a9500297bf52e9a69ffa6cb5f5f6399997514769e9251f604b0",
+            "version": "1.0.0.0"
+          }
+        }
+      },
+      "variant": "mutation"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 0,
+      "id": "T06.01",
+      "observed_code": 0,
+      "passed": true,
+      "reason": null,
+      "trace": {
+        "anchor_sha256": "236aa091bde8feb0d8f70a87ae4f1ad8f22541955ac2d7fe2a3bae8aa9cdec95",
+        "artifact_digests": {
+          "opaque.txt": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3"
+        },
+        "available_artifacts": [
+          "opaque.txt"
+        ],
+        "manifest_sha256": "236aa091bde8feb0d8f70a87ae4f1ad8f22541955ac2d7fe2a3bae8aa9cdec95",
+        "signature_valid": true
+      },
+      "variant": "positive"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 12,
+      "id": "T06.01",
+      "observed_code": 12,
+      "passed": true,
+      "reason": "signature rejected",
+      "trace": {
+        "anchor_sha256": "236aa091bde8feb0d8f70a87ae4f1ad8f22541955ac2d7fe2a3bae8aa9cdec95",
+        "artifact_digests": {
+          "opaque.txt": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3"
+        },
+        "available_artifacts": [
+          "opaque.txt"
+        ],
+        "manifest_sha256": "236aa091bde8feb0d8f70a87ae4f1ad8f22541955ac2d7fe2a3bae8aa9cdec95",
+        "signature_valid": false
+      },
+      "variant": "mutation"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 0,
+      "id": "T06.02",
+      "observed_code": 0,
+      "passed": true,
+      "reason": null,
+      "trace": {
+        "anchor_sha256": "236aa091bde8feb0d8f70a87ae4f1ad8f22541955ac2d7fe2a3bae8aa9cdec95",
+        "artifact_digests": {
+          "opaque.txt": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3"
+        },
+        "available_artifacts": [
+          "opaque.txt"
+        ],
+        "manifest_sha256": "236aa091bde8feb0d8f70a87ae4f1ad8f22541955ac2d7fe2a3bae8aa9cdec95",
+        "signature_valid": true
+      },
+      "variant": "positive"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 12,
+      "id": "T06.02",
+      "observed_code": 12,
+      "passed": true,
+      "reason": "manifest anchor",
+      "trace": {
+        "anchor_sha256": "236aa091bde8feb0d8f70a87ae4f1ad8f22541955ac2d7fe2a3bae8aa9cdec95",
+        "artifact_digests": {
+          "opaque.txt": "08f6bef6b018a8a6718abb31930fa4c1e82a2ea495031996b6103434adc4911d"
+        },
+        "available_artifacts": [
+          "opaque.txt"
+        ],
+        "manifest_sha256": "26436be7c0c096d2b360de4f3f93f5cdb25bca5cc86dec7e37872299f1253115",
+        "signature_valid": true
+      },
+      "variant": "mutation"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 0,
+      "id": "T06.03",
+      "observed_code": 0,
+      "passed": true,
+      "reason": null,
+      "trace": {
+        "anchor_sha256": "236aa091bde8feb0d8f70a87ae4f1ad8f22541955ac2d7fe2a3bae8aa9cdec95",
+        "artifact_digests": {
+          "opaque.txt": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3"
+        },
+        "available_artifacts": [
+          "opaque.txt"
+        ],
+        "manifest_sha256": "236aa091bde8feb0d8f70a87ae4f1ad8f22541955ac2d7fe2a3bae8aa9cdec95",
+        "signature_valid": true
+      },
+      "variant": "positive"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 12,
+      "id": "T06.03",
+      "observed_code": 12,
+      "passed": true,
+      "reason": "duplicate JSON key",
+      "trace": {
+        "anchor_sha256": "236aa091bde8feb0d8f70a87ae4f1ad8f22541955ac2d7fe2a3bae8aa9cdec95",
+        "artifact_digests": {
+          "opaque.txt": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3"
+        },
+        "available_artifacts": [
+          "opaque.txt"
+        ],
+        "manifest_sha256": "2f1223321003335918db1b87bfecbfb8a478d50c100d3ff70956805a1509e56c",
+        "signature_valid": true
+      },
+      "variant": "mutation"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 0,
+      "id": "T06.04",
+      "observed_code": 0,
+      "passed": true,
+      "reason": null,
+      "trace": {
+        "anchor_sha256": "236aa091bde8feb0d8f70a87ae4f1ad8f22541955ac2d7fe2a3bae8aa9cdec95",
+        "artifact_digests": {
+          "opaque.txt": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3"
+        },
+        "available_artifacts": [
+          "opaque.txt"
+        ],
+        "manifest_sha256": "236aa091bde8feb0d8f70a87ae4f1ad8f22541955ac2d7fe2a3bae8aa9cdec95",
+        "signature_valid": true
+      },
+      "variant": "positive"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 12,
+      "id": "T06.04",
+      "observed_code": 12,
+      "passed": true,
+      "reason": "artifact set",
+      "trace": {
+        "anchor_sha256": "236aa091bde8feb0d8f70a87ae4f1ad8f22541955ac2d7fe2a3bae8aa9cdec95",
+        "artifact_digests": {},
+        "available_artifacts": [],
+        "manifest_sha256": "236aa091bde8feb0d8f70a87ae4f1ad8f22541955ac2d7fe2a3bae8aa9cdec95",
+        "signature_valid": true
+      },
+      "variant": "mutation"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 0,
+      "id": "T08.01",
+      "observed_code": 0,
+      "passed": true,
+      "reason": null,
+      "trace": {
+        "projections": [
+          {
+            "baseline_sha256": "4c0e887d7ac6ea7a90f2c5462f1cd908a12f024f416b394378d1961b1000463e",
+            "commit": null,
+            "environment": "offline fixture",
+            "exit_code": 0,
+            "gate_refs": [
+              "c31-fixture"
+            ],
+            "inputs": [
+              {
+                "path": "opaque.txt",
+                "sha256": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3",
+                "size": 42
+              }
+            ],
+            "limits": {
+              "files": 10000,
+              "memory_bytes": 2147483648,
+              "output_bytes": 1073741824,
+              "resource_bytes": 67108864,
+              "seconds": 300
+            },
+            "logs": [],
+            "module": "synthetic",
+            "nested": {
+              "run_id": "semantic"
+            },
+            "outputs": [],
+            "parameters": [],
+            "schema_version": 3,
+            "scope": "synthetic_homologation",
+            "snapshot": "fixed",
+            "status": "complete",
+            "toolchain_sha256": "37d2a3543f5bbeda17e43c5daac9676da22fcdfac6d809385b25a36efc6bbfb3"
+          },
+          {
+            "baseline_sha256": "4c0e887d7ac6ea7a90f2c5462f1cd908a12f024f416b394378d1961b1000463e",
+            "commit": null,
+            "environment": "offline fixture",
+            "exit_code": 0,
+            "gate_refs": [
+              "c31-fixture"
+            ],
+            "inputs": [
+              {
+                "path": "opaque.txt",
+                "sha256": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3",
+                "size": 42
+              }
+            ],
+            "limits": {
+              "files": 10000,
+              "memory_bytes": 2147483648,
+              "output_bytes": 1073741824,
+              "resource_bytes": 67108864,
+              "seconds": 300
+            },
+            "logs": [],
+            "module": "synthetic",
+            "nested": {
+              "run_id": "semantic"
+            },
+            "outputs": [],
+            "parameters": [],
+            "schema_version": 3,
+            "scope": "synthetic_homologation",
+            "snapshot": "fixed",
+            "status": "complete",
+            "toolchain_sha256": "37d2a3543f5bbeda17e43c5daac9676da22fcdfac6d809385b25a36efc6bbfb3"
+          }
+        ],
+        "raw": [
+          {
+            "baseline_sha256": "4c0e887d7ac6ea7a90f2c5462f1cd908a12f024f416b394378d1961b1000463e",
+            "commit": null,
+            "elapsed_ms": 0,
+            "ended_utc": "2026-01-01T00:00:00Z",
+            "environment": "offline fixture",
+            "exit_code": 0,
+            "gate_refs": [
+              "c31-fixture"
+            ],
+            "inputs": [
+              {
+                "path": "opaque.txt",
+                "sha256": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3",
+                "size": 42
+              }
+            ],
+            "limits": {
+              "files": 10000,
+              "memory_bytes": 2147483648,
+              "output_bytes": 1073741824,
+              "resource_bytes": 67108864,
+              "seconds": 300
+            },
+            "logs": [],
+            "module": "synthetic",
+            "nested": {
+              "run_id": "semantic"
+            },
+            "outputs": [],
+            "parameters": [],
+            "run_id": "c31",
+            "schema_version": 3,
+            "scope": "synthetic_homologation",
+            "snapshot": "fixed",
+            "started_utc": "2026-01-01T00:00:00Z",
+            "status": "complete",
+            "toolchain_sha256": "37d2a3543f5bbeda17e43c5daac9676da22fcdfac6d809385b25a36efc6bbfb3"
+          },
+          {
+            "baseline_sha256": "4c0e887d7ac6ea7a90f2c5462f1cd908a12f024f416b394378d1961b1000463e",
+            "commit": null,
+            "elapsed_ms": 1,
+            "ended_utc": "2026-01-01T00:00:00Z",
+            "environment": "offline fixture",
+            "exit_code": 0,
+            "gate_refs": [
+              "c31-fixture"
+            ],
+            "inputs": [
+              {
+                "path": "opaque.txt",
+                "sha256": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3",
+                "size": 42
+              }
+            ],
+            "limits": {
+              "files": 10000,
+              "memory_bytes": 2147483648,
+              "output_bytes": 1073741824,
+              "resource_bytes": 67108864,
+              "seconds": 300
+            },
+            "logs": [],
+            "module": "synthetic",
+            "nested": {
+              "run_id": "semantic"
+            },
+            "outputs": [],
+            "parameters": [],
+            "run_id": "second",
+            "schema_version": 3,
+            "scope": "synthetic_homologation",
+            "snapshot": "fixed",
+            "started_utc": "2026-01-01T00:00:00Z",
+            "status": "complete",
+            "toolchain_sha256": "37d2a3543f5bbeda17e43c5daac9676da22fcdfac6d809385b25a36efc6bbfb3"
+          }
+        ]
+      },
+      "variant": "positive"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 15,
+      "id": "T08.01",
+      "observed_code": 15,
+      "passed": true,
+      "reason": "nonvolatile divergence",
+      "trace": {
+        "projections": [
+          {
+            "baseline_sha256": "4c0e887d7ac6ea7a90f2c5462f1cd908a12f024f416b394378d1961b1000463e",
+            "commit": null,
+            "environment": "offline fixture",
+            "exit_code": 0,
+            "gate_refs": [
+              "c31-fixture"
+            ],
+            "inputs": [
+              {
+                "path": "opaque.txt",
+                "sha256": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3",
+                "size": 42
+              }
+            ],
+            "limits": {
+              "files": 10000,
+              "memory_bytes": 2147483648,
+              "output_bytes": 1073741824,
+              "resource_bytes": 67108864,
+              "seconds": 300
+            },
+            "logs": [],
+            "module": "synthetic",
+            "nested": {
+              "run_id": "semantic"
+            },
+            "outputs": [],
+            "parameters": [],
+            "schema_version": 3,
+            "scope": "synthetic_homologation",
+            "snapshot": "fixed",
+            "status": "complete",
+            "toolchain_sha256": "37d2a3543f5bbeda17e43c5daac9676da22fcdfac6d809385b25a36efc6bbfb3"
+          },
+          {
+            "baseline_sha256": "4c0e887d7ac6ea7a90f2c5462f1cd908a12f024f416b394378d1961b1000463e",
+            "commit": null,
+            "environment": "offline fixture",
+            "exit_code": 0,
+            "gate_refs": [
+              "c31-fixture"
+            ],
+            "inputs": [
+              {
+                "path": "opaque.txt",
+                "sha256": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3",
+                "size": 42
+              }
+            ],
+            "limits": {
+              "files": 10000,
+              "memory_bytes": 2147483648,
+              "output_bytes": 1073741824,
+              "resource_bytes": 67108864,
+              "seconds": 300
+            },
+            "logs": [],
+            "module": "different",
+            "nested": {
+              "run_id": "semantic"
+            },
+            "outputs": [],
+            "parameters": [],
+            "schema_version": 3,
+            "scope": "synthetic_homologation",
+            "snapshot": "fixed",
+            "status": "complete",
+            "toolchain_sha256": "37d2a3543f5bbeda17e43c5daac9676da22fcdfac6d809385b25a36efc6bbfb3"
+          }
+        ],
+        "raw": [
+          {
+            "baseline_sha256": "4c0e887d7ac6ea7a90f2c5462f1cd908a12f024f416b394378d1961b1000463e",
+            "commit": null,
+            "elapsed_ms": 0,
+            "ended_utc": "2026-01-01T00:00:00Z",
+            "environment": "offline fixture",
+            "exit_code": 0,
+            "gate_refs": [
+              "c31-fixture"
+            ],
+            "inputs": [
+              {
+                "path": "opaque.txt",
+                "sha256": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3",
+                "size": 42
+              }
+            ],
+            "limits": {
+              "files": 10000,
+              "memory_bytes": 2147483648,
+              "output_bytes": 1073741824,
+              "resource_bytes": 67108864,
+              "seconds": 300
+            },
+            "logs": [],
+            "module": "synthetic",
+            "nested": {
+              "run_id": "semantic"
+            },
+            "outputs": [],
+            "parameters": [],
+            "run_id": "c31",
+            "schema_version": 3,
+            "scope": "synthetic_homologation",
+            "snapshot": "fixed",
+            "started_utc": "2026-01-01T00:00:00Z",
+            "status": "complete",
+            "toolchain_sha256": "37d2a3543f5bbeda17e43c5daac9676da22fcdfac6d809385b25a36efc6bbfb3"
+          },
+          {
+            "baseline_sha256": "4c0e887d7ac6ea7a90f2c5462f1cd908a12f024f416b394378d1961b1000463e",
+            "commit": null,
+            "elapsed_ms": 1,
+            "ended_utc": "2026-01-01T00:00:00Z",
+            "environment": "offline fixture",
+            "exit_code": 0,
+            "gate_refs": [
+              "c31-fixture"
+            ],
+            "inputs": [
+              {
+                "path": "opaque.txt",
+                "sha256": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3",
+                "size": 42
+              }
+            ],
+            "limits": {
+              "files": 10000,
+              "memory_bytes": 2147483648,
+              "output_bytes": 1073741824,
+              "resource_bytes": 67108864,
+              "seconds": 300
+            },
+            "logs": [],
+            "module": "different",
+            "nested": {
+              "run_id": "semantic"
+            },
+            "outputs": [],
+            "parameters": [],
+            "run_id": "second",
+            "schema_version": 3,
+            "scope": "synthetic_homologation",
+            "snapshot": "fixed",
+            "started_utc": "2026-01-01T00:00:00Z",
+            "status": "complete",
+            "toolchain_sha256": "37d2a3543f5bbeda17e43c5daac9676da22fcdfac6d809385b25a36efc6bbfb3"
+          }
+        ]
+      },
+      "variant": "mutation"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 0,
+      "id": "T08.02",
+      "observed_code": 0,
+      "passed": true,
+      "reason": null,
+      "trace": {
+        "projections": [
+          {
+            "baseline_sha256": "4c0e887d7ac6ea7a90f2c5462f1cd908a12f024f416b394378d1961b1000463e",
+            "commit": null,
+            "environment": "offline fixture",
+            "exit_code": 0,
+            "gate_refs": [
+              "c31-fixture"
+            ],
+            "inputs": [
+              {
+                "path": "opaque.txt",
+                "sha256": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3",
+                "size": 42
+              }
+            ],
+            "limits": {
+              "files": 10000,
+              "memory_bytes": 2147483648,
+              "output_bytes": 1073741824,
+              "resource_bytes": 67108864,
+              "seconds": 300
+            },
+            "logs": [],
+            "module": "synthetic",
+            "nested": {
+              "run_id": "semantic"
+            },
+            "outputs": [],
+            "parameters": [],
+            "schema_version": 3,
+            "scope": "synthetic_homologation",
+            "snapshot": "fixed",
+            "status": "complete",
+            "toolchain_sha256": "37d2a3543f5bbeda17e43c5daac9676da22fcdfac6d809385b25a36efc6bbfb3"
+          },
+          {
+            "baseline_sha256": "4c0e887d7ac6ea7a90f2c5462f1cd908a12f024f416b394378d1961b1000463e",
+            "commit": null,
+            "environment": "offline fixture",
+            "exit_code": 0,
+            "gate_refs": [
+              "c31-fixture"
+            ],
+            "inputs": [
+              {
+                "path": "opaque.txt",
+                "sha256": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3",
+                "size": 42
+              }
+            ],
+            "limits": {
+              "files": 10000,
+              "memory_bytes": 2147483648,
+              "output_bytes": 1073741824,
+              "resource_bytes": 67108864,
+              "seconds": 300
+            },
+            "logs": [],
+            "module": "synthetic",
+            "nested": {
+              "run_id": "semantic"
+            },
+            "outputs": [],
+            "parameters": [],
+            "schema_version": 3,
+            "scope": "synthetic_homologation",
+            "snapshot": "fixed",
+            "status": "complete",
+            "toolchain_sha256": "37d2a3543f5bbeda17e43c5daac9676da22fcdfac6d809385b25a36efc6bbfb3"
+          }
+        ],
+        "raw": [
+          {
+            "baseline_sha256": "4c0e887d7ac6ea7a90f2c5462f1cd908a12f024f416b394378d1961b1000463e",
+            "commit": null,
+            "elapsed_ms": 0,
+            "ended_utc": "2026-01-01T00:00:00Z",
+            "environment": "offline fixture",
+            "exit_code": 0,
+            "gate_refs": [
+              "c31-fixture"
+            ],
+            "inputs": [
+              {
+                "path": "opaque.txt",
+                "sha256": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3",
+                "size": 42
+              }
+            ],
+            "limits": {
+              "files": 10000,
+              "memory_bytes": 2147483648,
+              "output_bytes": 1073741824,
+              "resource_bytes": 67108864,
+              "seconds": 300
+            },
+            "logs": [],
+            "module": "synthetic",
+            "nested": {
+              "run_id": "semantic"
+            },
+            "outputs": [],
+            "parameters": [],
+            "run_id": "c31",
+            "schema_version": 3,
+            "scope": "synthetic_homologation",
+            "snapshot": "fixed",
+            "started_utc": "2026-01-01T00:00:00Z",
+            "status": "complete",
+            "toolchain_sha256": "37d2a3543f5bbeda17e43c5daac9676da22fcdfac6d809385b25a36efc6bbfb3"
+          },
+          {
+            "baseline_sha256": "4c0e887d7ac6ea7a90f2c5462f1cd908a12f024f416b394378d1961b1000463e",
+            "commit": null,
+            "elapsed_ms": 1,
+            "ended_utc": "2026-01-01T00:00:00Z",
+            "environment": "offline fixture",
+            "exit_code": 0,
+            "gate_refs": [
+              "c31-fixture"
+            ],
+            "inputs": [
+              {
+                "path": "opaque.txt",
+                "sha256": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3",
+                "size": 42
+              }
+            ],
+            "limits": {
+              "files": 10000,
+              "memory_bytes": 2147483648,
+              "output_bytes": 1073741824,
+              "resource_bytes": 67108864,
+              "seconds": 300
+            },
+            "logs": [],
+            "module": "synthetic",
+            "nested": {
+              "run_id": "semantic"
+            },
+            "outputs": [],
+            "parameters": [],
+            "run_id": "second",
+            "schema_version": 3,
+            "scope": "synthetic_homologation",
+            "snapshot": "fixed",
+            "started_utc": "2026-01-01T00:00:00Z",
+            "status": "complete",
+            "toolchain_sha256": "37d2a3543f5bbeda17e43c5daac9676da22fcdfac6d809385b25a36efc6bbfb3"
+          }
+        ]
+      },
+      "variant": "positive"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 15,
+      "id": "T08.02",
+      "observed_code": 15,
+      "passed": true,
+      "reason": "nonvolatile divergence",
+      "trace": {
+        "projections": [
+          {
+            "baseline_sha256": "4c0e887d7ac6ea7a90f2c5462f1cd908a12f024f416b394378d1961b1000463e",
+            "commit": null,
+            "environment": "offline fixture",
+            "exit_code": 0,
+            "gate_refs": [
+              "c31-fixture"
+            ],
+            "inputs": [
+              {
+                "path": "opaque.txt",
+                "sha256": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3",
+                "size": 42
+              }
+            ],
+            "limits": {
+              "files": 10000,
+              "memory_bytes": 2147483648,
+              "output_bytes": 1073741824,
+              "resource_bytes": 67108864,
+              "seconds": 300
+            },
+            "logs": [],
+            "module": "synthetic",
+            "nested": {
+              "run_id": "semantic"
+            },
+            "outputs": [],
+            "parameters": [],
+            "schema_version": 3,
+            "scope": "synthetic_homologation",
+            "snapshot": "fixed",
+            "status": "complete",
+            "toolchain_sha256": "37d2a3543f5bbeda17e43c5daac9676da22fcdfac6d809385b25a36efc6bbfb3"
+          },
+          {
+            "baseline_sha256": "4c0e887d7ac6ea7a90f2c5462f1cd908a12f024f416b394378d1961b1000463e",
+            "commit": null,
+            "environment": "offline fixture",
+            "exit_code": 0,
+            "gate_refs": [
+              "c31-fixture"
+            ],
+            "inputs": [
+              {
+                "path": "opaque.txt",
+                "sha256": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3",
+                "size": 42
+              }
+            ],
+            "limits": {
+              "files": 10000,
+              "memory_bytes": 2147483648,
+              "output_bytes": 1073741824,
+              "resource_bytes": 67108864,
+              "seconds": 300
+            },
+            "logs": [],
+            "module": "synthetic",
+            "nested": {
+              "run_id": "different"
+            },
+            "outputs": [],
+            "parameters": [],
+            "schema_version": 3,
+            "scope": "synthetic_homologation",
+            "snapshot": "fixed",
+            "status": "complete",
+            "toolchain_sha256": "37d2a3543f5bbeda17e43c5daac9676da22fcdfac6d809385b25a36efc6bbfb3"
+          }
+        ],
+        "raw": [
+          {
+            "baseline_sha256": "4c0e887d7ac6ea7a90f2c5462f1cd908a12f024f416b394378d1961b1000463e",
+            "commit": null,
+            "elapsed_ms": 0,
+            "ended_utc": "2026-01-01T00:00:00Z",
+            "environment": "offline fixture",
+            "exit_code": 0,
+            "gate_refs": [
+              "c31-fixture"
+            ],
+            "inputs": [
+              {
+                "path": "opaque.txt",
+                "sha256": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3",
+                "size": 42
+              }
+            ],
+            "limits": {
+              "files": 10000,
+              "memory_bytes": 2147483648,
+              "output_bytes": 1073741824,
+              "resource_bytes": 67108864,
+              "seconds": 300
+            },
+            "logs": [],
+            "module": "synthetic",
+            "nested": {
+              "run_id": "semantic"
+            },
+            "outputs": [],
+            "parameters": [],
+            "run_id": "c31",
+            "schema_version": 3,
+            "scope": "synthetic_homologation",
+            "snapshot": "fixed",
+            "started_utc": "2026-01-01T00:00:00Z",
+            "status": "complete",
+            "toolchain_sha256": "37d2a3543f5bbeda17e43c5daac9676da22fcdfac6d809385b25a36efc6bbfb3"
+          },
+          {
+            "baseline_sha256": "4c0e887d7ac6ea7a90f2c5462f1cd908a12f024f416b394378d1961b1000463e",
+            "commit": null,
+            "elapsed_ms": 1,
+            "ended_utc": "2026-01-01T00:00:00Z",
+            "environment": "offline fixture",
+            "exit_code": 0,
+            "gate_refs": [
+              "c31-fixture"
+            ],
+            "inputs": [
+              {
+                "path": "opaque.txt",
+                "sha256": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3",
+                "size": 42
+              }
+            ],
+            "limits": {
+              "files": 10000,
+              "memory_bytes": 2147483648,
+              "output_bytes": 1073741824,
+              "resource_bytes": 67108864,
+              "seconds": 300
+            },
+            "logs": [],
+            "module": "synthetic",
+            "nested": {
+              "run_id": "different"
+            },
+            "outputs": [],
+            "parameters": [],
+            "run_id": "second",
+            "schema_version": 3,
+            "scope": "synthetic_homologation",
+            "snapshot": "fixed",
+            "started_utc": "2026-01-01T00:00:00Z",
+            "status": "complete",
+            "toolchain_sha256": "37d2a3543f5bbeda17e43c5daac9676da22fcdfac6d809385b25a36efc6bbfb3"
+          }
+        ]
+      },
+      "variant": "mutation"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 0,
+      "id": "T09-B.01",
+      "observed_code": 0,
+      "passed": true,
+      "reason": null,
+      "trace": {
+        "anchor_sha256": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3",
+        "parser_calls": 0,
+        "sha256": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3"
+      },
+      "variant": "positive"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 10,
+      "id": "T09-B.01",
+      "observed_code": 10,
+      "passed": true,
+      "reason": "identity",
+      "trace": {
+        "anchor_sha256": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3",
+        "parser_calls": 0,
+        "sha256": "08f6bef6b018a8a6718abb31930fa4c1e82a2ea495031996b6103434adc4911d"
+      },
+      "variant": "mutation"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 0,
+      "id": "T10-A.01",
+      "observed_code": 0,
+      "passed": true,
+      "reason": null,
+      "trace": {
+        "anchor_sha256": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3",
+        "identical_bytes": true,
+        "parser_calls": 0,
+        "sha256": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3"
+      },
+      "variant": "positive"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 0,
+      "id": "T10-A.01",
+      "observed_code": 0,
+      "passed": true,
+      "reason": null,
+      "trace": {
+        "anchor_sha256": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3",
+        "identical_bytes": true,
+        "parser_calls": 0,
+        "sha256": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3"
+      },
+      "variant": "mutation"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 0,
+      "id": "T12.04",
+      "observed_code": 0,
+      "passed": true,
+      "reason": null,
+      "trace": {
+        "observed_link": {
+          "encoding": "utf-8",
+          "end": 245,
+          "engine_evidence": "3206e027ccb63c31eee4f018ada49470167c7ae26005c07208874a89833a6839",
+          "kind": "direct",
+          "owner": "PreparationFixtures.Sample",
+          "path": "Synthetic.cs",
+          "sha256": "590d1f478a8e90111663896d3b69485b02197ba70660596cac3760fd5ffbfebe",
+          "signature": "int Same(int)",
+          "start": 197
+        },
+        "observed_signature": "int Same(int)",
+        "source_excerpt": "public int Same(int value) { return value + 1; }",
+        "trusted_link": {
+          "encoding": "utf-8",
+          "end": 245,
+          "engine_evidence": "3206e027ccb63c31eee4f018ada49470167c7ae26005c07208874a89833a6839",
+          "kind": "direct",
+          "owner": "PreparationFixtures.Sample",
+          "path": "Synthetic.cs",
+          "sha256": "590d1f478a8e90111663896d3b69485b02197ba70660596cac3760fd5ffbfebe",
+          "signature": "int Same(int)",
+          "start": 197
+        },
+        "trusted_signature": "int Same(int)",
+        "validator": "DC00.2-P/supervisor/validator.py:methoddef",
+        "validator_result": {
+          "code": 0,
+          "reason": null
+        }
+      },
+      "variant": "positive"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 15,
+      "id": "T12.04",
+      "observed_code": 15,
+      "passed": true,
+      "reason": "method signature divergence",
+      "trace": {
+        "observed_link": {
+          "encoding": "utf-8",
+          "end": 245,
+          "engine_evidence": "3206e027ccb63c31eee4f018ada49470167c7ae26005c07208874a89833a6839",
+          "kind": "direct",
+          "owner": "PreparationFixtures.Sample",
+          "path": "Synthetic.cs",
+          "sha256": "590d1f478a8e90111663896d3b69485b02197ba70660596cac3760fd5ffbfebe",
+          "signature": "int Same(int)",
+          "start": 197
+        },
+        "observed_signature": "int Same(short)",
+        "signature_repair_code": 0,
+        "source_excerpt": "public int Same(int value) { return value + 1; }",
+        "trusted_link": {
+          "encoding": "utf-8",
+          "end": 245,
+          "engine_evidence": "3206e027ccb63c31eee4f018ada49470167c7ae26005c07208874a89833a6839",
+          "kind": "direct",
+          "owner": "PreparationFixtures.Sample",
+          "path": "Synthetic.cs",
+          "sha256": "590d1f478a8e90111663896d3b69485b02197ba70660596cac3760fd5ffbfebe",
+          "signature": "int Same(int)",
+          "start": 197
+        },
+        "trusted_signature": "int Same(int)",
+        "validator": "DC00.2-P/supervisor/validator.py:methoddef",
+        "validator_result": {
+          "code": 12,
+          "reason": "independent identity"
+        }
+      },
+      "variant": "mutation"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 0,
+      "id": "T12.05",
+      "observed_code": 0,
+      "passed": true,
+      "reason": null,
+      "trace": {
+        "observed_link": {
+          "encoding": "utf-8",
+          "end": 245,
+          "engine_evidence": "3206e027ccb63c31eee4f018ada49470167c7ae26005c07208874a89833a6839",
+          "kind": "direct",
+          "owner": "PreparationFixtures.Sample",
+          "path": "Synthetic.cs",
+          "sha256": "590d1f478a8e90111663896d3b69485b02197ba70660596cac3760fd5ffbfebe",
+          "signature": "int Same(int)",
+          "start": 197
+        },
+        "observed_signature": "int Same(int)",
+        "source_excerpt": "public int Same(int value) { return value + 1; }",
+        "trusted_link": {
+          "encoding": "utf-8",
+          "end": 245,
+          "engine_evidence": "3206e027ccb63c31eee4f018ada49470167c7ae26005c07208874a89833a6839",
+          "kind": "direct",
+          "owner": "PreparationFixtures.Sample",
+          "path": "Synthetic.cs",
+          "sha256": "590d1f478a8e90111663896d3b69485b02197ba70660596cac3760fd5ffbfebe",
+          "signature": "int Same(int)",
+          "start": 197
+        },
+        "trusted_signature": "int Same(int)",
+        "validator": "DC00.2-P/supervisor/validator.py:methoddef",
+        "validator_result": {
+          "code": 0,
+          "reason": null
+        }
+      },
+      "variant": "positive"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 15,
+      "id": "T12.05",
+      "observed_code": 15,
+      "passed": true,
+      "reason": "link identity",
+      "trace": {
+        "observed_link": {
+          "encoding": "utf-8",
+          "end": 304,
+          "engine_evidence": "3206e027ccb63c31eee4f018ada49470167c7ae26005c07208874a89833a6839",
+          "kind": "direct",
+          "owner": "PreparationFixtures.Sample",
+          "path": "Synthetic.cs",
+          "sha256": "590d1f478a8e90111663896d3b69485b02197ba70660596cac3760fd5ffbfebe",
+          "signature": "int Same(int)",
+          "start": 254
+        },
+        "observed_signature": "int Same(int)",
+        "source_excerpt": "public int Same(short value) { return value + 2; }",
+        "trusted_link": {
+          "encoding": "utf-8",
+          "end": 245,
+          "engine_evidence": "3206e027ccb63c31eee4f018ada49470167c7ae26005c07208874a89833a6839",
+          "kind": "direct",
+          "owner": "PreparationFixtures.Sample",
+          "path": "Synthetic.cs",
+          "sha256": "590d1f478a8e90111663896d3b69485b02197ba70660596cac3760fd5ffbfebe",
+          "signature": "int Same(int)",
+          "start": 197
+        },
+        "trusted_signature": "int Same(int)",
+        "validator": "DC00.2-P/supervisor/validator.py:methoddef",
+        "validator_result": {
+          "code": 15,
+          "reason": "link identity"
+        }
+      },
+      "variant": "mutation"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 0,
+      "id": "T14.01",
+      "observed_code": 0,
+      "passed": true,
+      "reason": null,
+      "trace": {
+        "graphs": [
+          {
+            "covered": true,
+            "edges": [
+              [
+                "components:reference",
+                "components:reference_rows"
+              ]
+            ],
+            "nodes": [
+              "components:reference",
+              "components:reference_rows"
+            ],
+            "root": "components:reference"
+          },
+          {
+            "covered": true,
+            "edges": [
+              [
+                "components:counted",
+                "components:counted_rows"
+              ]
+            ],
+            "nodes": [
+              "components:counted",
+              "components:counted_rows"
+            ],
+            "root": "components:counted"
+          }
+        ],
+        "property": "coverage",
+        "shared": []
+      },
+      "variant": "positive"
+    },
+    {
+      "blocked_events": [],
+      "expected_code": 18,
+      "id": "T14.01",
+      "observed_code": 18,
+      "passed": true,
+      "reason": "shared or missing components",
+      "trace": {
+        "graphs": [
+          {
+            "covered": true,
+            "edges": [
+              [
+                "components:reference",
+                "components:reference_rows"
+              ]
+            ],
+            "nodes": [
+              "components:reference",
+              "components:reference_rows"
+            ],
+            "root": "components:reference"
+          },
+          {
+            "covered": true,
+            "edges": [
+              [
+                "components:shared_reader",
+                "components:reference_rows"
+              ]
+            ],
+            "nodes": [
+              "components:reference_rows",
+              "components:shared_reader"
+            ],
+            "root": "components:shared_reader"
+          }
+        ],
+        "property": "coverage",
+        "shared": [
+          "components:reference_rows"
+        ]
+      },
+      "variant": "mutation"
+    }
+  ],
+  "controls_executed": 34,
+  "controls_passed": 34,
+  "environment": {
+    "cryptography": "46.0.3",
+    "jsonschema": "4.25.1",
+    "python": "3.12.14"
+  },
+  "homologated": false,
+  "stage": "DC00.2-P-C3.1-R1"
+}
