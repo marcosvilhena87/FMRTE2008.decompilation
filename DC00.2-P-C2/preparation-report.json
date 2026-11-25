@@ -1,0 +1,23 @@
+{
+  "stage": "DC00.2-P-C2",
+  "parent": "e419a121e0888e154c10840214ddec88643182b5",
+  "original_pr_files_preserved": 33,
+  "case_counts": {
+    "external_blocked": 29,
+    "signed_gate_required": 7,
+    "structural": 4,
+    "legacy_data": 17
+  },
+  "tests_executed": 0,
+  "compiled": false,
+  "target_access": false,
+  "homologated": false,
+  "limitations": [
+    "restricted opcode set",
+    "no complete CLR token resolution or stack/EH verifier",
+    "signed test vectors not generated",
+    "legacy adapter not wired to real validators for every case",
+    "external adapter contract only",
+    "no trust provisioning or transitively authenticated dependency lock"
+  ]
+}

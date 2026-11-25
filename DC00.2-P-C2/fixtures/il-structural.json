@@ -1,0 +1,64 @@
+{
+  "status": "not_run",
+  "body_format": "hex; synthetic bodies only",
+  "cases": [
+    {
+      "id": "tiny-ret",
+      "hex": "062a",
+      "expected": "accept"
+    },
+    {
+      "id": "fat-ret",
+      "hex": "0330080001000000000000002a",
+      "expected": "accept"
+    },
+    {
+      "id": "fat-small-EH",
+      "hex": "0b3008000400000000000000002a002a01100000000000000202000201000001",
+      "expected": "accept"
+    },
+    {
+      "id": "fat-large-EH",
+      "hex": "0b3008000400000000000000002a002a411c0000000000000000000002000000020000000200000001000001",
+      "expected": "accept"
+    },
+    {
+      "id": "truncated-fat",
+      "hex": "0330080002000000000000002a",
+      "expected": "reject"
+    },
+    {
+      "id": "branch-outside",
+      "hex": "0e2b7f2a",
+      "expected": "reject"
+    },
+    {
+      "id": "truncated-operand",
+      "hex": "0a202a",
+      "expected": "reject"
+    }
+  ],
+  "oracle_vectors": [
+    {
+      "id": "T04.01",
+      "positive": "0a172a",
+      "mutated": "0a17"
+    },
+    {
+      "id": "T12.01",
+      "positive": "0e1f012a",
+      "mutated": "0e1f022a"
+    },
+    {
+      "id": "T12.02",
+      "positive": "0e17582a",
+      "mutated": "0e17592a"
+    },
+    {
+      "id": "T12.03",
+      "positive": "1a28010000062a",
+      "mutated": "1a28020000062a"
+    }
+  ],
+  "reference_policy": "reference parsed structure must be independently frozen before evaluation; no parser-derived reference accepted as independent evidence"
+}
