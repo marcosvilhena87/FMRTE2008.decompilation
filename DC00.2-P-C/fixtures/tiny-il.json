@@ -1,0 +1,26 @@
+{
+  "format": "synthetic tiny method body hex, not assembly",
+  "cases": [
+    {
+      "id": "ret",
+      "hex": "062a",
+      "expected": "supported"
+    },
+    {
+      "id": "constant_ret",
+      "hex": "0a172a",
+      "expected": "supported"
+    },
+    {
+      "id": "truncated",
+      "hex": "0a17",
+      "expected": "reject"
+    },
+    {
+      "id": "fat",
+      "hex": "03300000",
+      "expected": "reject"
+    }
+  ],
+  "executed": false
+}

@@ -1,0 +1,519 @@
+{
+  "source_catalog": "../DC00.2-P/tests/catalog.json",
+  "status": "prepared_not_run",
+  "cases": [
+    {
+      "id": "T01.01",
+      "mutation": "byte_changed",
+      "expected_code": 10,
+      "mode": "in_memory",
+      "positive_control": "same fixture without mutation",
+      "required_evidence": "zero chamadas ao parser",
+      "executed": false
+    },
+    {
+      "id": "T02.01",
+      "mutation": "missing_rid",
+      "expected_code": 11,
+      "mode": "in_memory",
+      "positive_control": "same fixture without mutation",
+      "required_evidence": "diferença exata de conjuntos",
+      "executed": false
+    },
+    {
+      "id": "T02.02",
+      "mutation": "unexpected_rid",
+      "expected_code": 11,
+      "mode": "in_memory",
+      "positive_control": "same fixture without mutation",
+      "required_evidence": "diferença exata de conjuntos",
+      "executed": false
+    },
+    {
+      "id": "T03.01",
+      "mutation": "duplicate_replaces_rid",
+      "expected_code": 11,
+      "mode": "in_memory",
+      "positive_control": "same fixture without mutation",
+      "required_evidence": "duplicata e omissão",
+      "executed": false
+    },
+    {
+      "id": "T04.01",
+      "mutation": "truncated_output_rehashed",
+      "expected_code": 12,
+      "mode": "in_memory",
+      "positive_control": "same fixture without mutation",
+      "required_evidence": "rejeição apesar do hash coerente",
+      "executed": false
+    },
+    {
+      "id": "T05.01",
+      "mutation": "missing_dependency",
+      "expected_code": 13,
+      "mode": "in_memory",
+      "positive_control": "same fixture without mutation",
+      "required_evidence": "sem fallback nem rede",
+      "executed": false
+    },
+    {
+      "id": "T05.02",
+      "mutation": "wrong_identity_same_name",
+      "expected_code": 13,
+      "mode": "in_memory",
+      "positive_control": "same fixture without mutation",
+      "required_evidence": "sem fallback nem rede",
+      "executed": false
+    },
+    {
+      "id": "T06.01",
+      "mutation": "forged_approval",
+      "expected_code": 12,
+      "mode": "in_memory",
+      "positive_control": "same fixture without mutation",
+      "required_evidence": "cada mutação rejeitada",
+      "executed": false
+    },
+    {
+      "id": "T06.02",
+      "mutation": "joint_replacement",
+      "expected_code": 12,
+      "mode": "in_memory",
+      "positive_control": "same fixture without mutation",
+      "required_evidence": "cada mutação rejeitada",
+      "executed": false
+    },
+    {
+      "id": "T06.03",
+      "mutation": "duplicate_json_key",
+      "expected_code": 12,
+      "mode": "in_memory",
+      "positive_control": "same fixture without mutation",
+      "required_evidence": "cada mutação rejeitada",
+      "executed": false
+    },
+    {
+      "id": "T06.04",
+      "mutation": "broken_reference",
+      "expected_code": 12,
+      "mode": "in_memory",
+      "positive_control": "same fixture without mutation",
+      "required_evidence": "cada mutação rejeitada",
+      "executed": false
+    },
+    {
+      "id": "T07.01",
+      "mutation": "absolute",
+      "expected_code": 14,
+      "mode": "external_blocked",
+      "positive_control": "external positive control required",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "executed": false
+    },
+    {
+      "id": "T07.02",
+      "mutation": "unc",
+      "expected_code": 14,
+      "mode": "external_blocked",
+      "positive_control": "external positive control required",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "executed": false
+    },
+    {
+      "id": "T07.03",
+      "mutation": "drive_relative",
+      "expected_code": 14,
+      "mode": "external_blocked",
+      "positive_control": "external positive control required",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "executed": false
+    },
+    {
+      "id": "T07.04",
+      "mutation": "ads",
+      "expected_code": 14,
+      "mode": "external_blocked",
+      "positive_control": "external positive control required",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "executed": false
+    },
+    {
+      "id": "T07.05",
+      "mutation": "nul",
+      "expected_code": 14,
+      "mode": "external_blocked",
+      "positive_control": "external positive control required",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "executed": false
+    },
+    {
+      "id": "T07.06",
+      "mutation": "invalid_character",
+      "expected_code": 14,
+      "mode": "external_blocked",
+      "positive_control": "external positive control required",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "executed": false
+    },
+    {
+      "id": "T07.07",
+      "mutation": "parent",
+      "expected_code": 14,
+      "mode": "external_blocked",
+      "positive_control": "external positive control required",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "executed": false
+    },
+    {
+      "id": "T07.08",
+      "mutation": "reserved",
+      "expected_code": 14,
+      "mode": "external_blocked",
+      "positive_control": "external positive control required",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "executed": false
+    },
+    {
+      "id": "T07.09",
+      "mutation": "trailing_dot",
+      "expected_code": 14,
+      "mode": "external_blocked",
+      "positive_control": "external positive control required",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "executed": false
+    },
+    {
+      "id": "T07.10",
+      "mutation": "trailing_space",
+      "expected_code": 14,
+      "mode": "external_blocked",
+      "positive_control": "external positive control required",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "executed": false
+    },
+    {
+      "id": "T07.11",
+      "mutation": "case_collision",
+      "expected_code": 14,
+      "mode": "external_blocked",
+      "positive_control": "external positive control required",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "executed": false
+    },
+    {
+      "id": "T07.12",
+      "mutation": "unicode_collision",
+      "expected_code": 14,
+      "mode": "external_blocked",
+      "positive_control": "external positive control required",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "executed": false
+    },
+    {
+      "id": "T07.13",
+      "mutation": "symlink",
+      "expected_code": 14,
+      "mode": "external_blocked",
+      "positive_control": "external positive control required",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "executed": false
+    },
+    {
+      "id": "T07.14",
+      "mutation": "reparse_point",
+      "expected_code": 14,
+      "mode": "external_blocked",
+      "positive_control": "external positive control required",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "executed": false
+    },
+    {
+      "id": "T07.15",
+      "mutation": "overwrite",
+      "expected_code": 14,
+      "mode": "external_blocked",
+      "positive_control": "external positive control required",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "executed": false
+    },
+    {
+      "id": "T07.16",
+      "mutation": "direct_write",
+      "expected_code": 14,
+      "mode": "external_blocked",
+      "positive_control": "external positive control required",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "executed": false
+    },
+    {
+      "id": "T07.17",
+      "mutation": "native_execution",
+      "expected_code": 14,
+      "mode": "external_blocked",
+      "positive_control": "external positive control required",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "executed": false
+    },
+    {
+      "id": "T07.18",
+      "mutation": "managed_execution",
+      "expected_code": 14,
+      "mode": "external_blocked",
+      "positive_control": "external positive control required",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "executed": false
+    },
+    {
+      "id": "T07.19",
+      "mutation": "child_process",
+      "expected_code": 14,
+      "mode": "external_blocked",
+      "positive_control": "external positive control required",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "executed": false
+    },
+    {
+      "id": "T07.20",
+      "mutation": "network",
+      "expected_code": 14,
+      "mode": "external_blocked",
+      "positive_control": "external positive control required",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "executed": false
+    },
+    {
+      "id": "T08.01",
+      "mutation": "nonvolatile_change",
+      "expected_code": 15,
+      "mode": "in_memory",
+      "positive_control": "same fixture without mutation",
+      "required_evidence": "ambas preservadas",
+      "executed": false
+    },
+    {
+      "id": "T08.02",
+      "mutation": "nested_homonym_change",
+      "expected_code": 15,
+      "mode": "in_memory",
+      "positive_control": "same fixture without mutation",
+      "required_evidence": "ambas preservadas",
+      "executed": false
+    },
+    {
+      "id": "T09-A.01",
+      "mutation": "protected_write",
+      "expected_code": 14,
+      "mode": "external_blocked",
+      "positive_control": "external positive control required",
+      "required_evidence": "negação e hash intacto",
+      "executed": false
+    },
+    {
+      "id": "T09-B.01",
+      "mutation": "changed_hash",
+      "expected_code": 10,
+      "mode": "in_memory",
+      "positive_control": "same fixture without mutation",
+      "required_evidence": "incidente detectado",
+      "executed": false
+    },
+    {
+      "id": "T10-A.01",
+      "mutation": "opaque_read",
+      "expected_code": 0,
+      "mode": "in_memory",
+      "positive_control": "same fixture without mutation",
+      "required_evidence": "bytes idênticos sem desserialização",
+      "executed": false
+    },
+    {
+      "id": "T10-B.01",
+      "mutation": "deserialize_request",
+      "expected_code": 14,
+      "mode": "external_blocked",
+      "positive_control": "external positive control required",
+      "required_evidence": "operação não iniciada",
+      "executed": false
+    },
+    {
+      "id": "T11.01",
+      "mutation": "time",
+      "expected_code": 16,
+      "mode": "external_blocked",
+      "positive_control": "external positive control required",
+      "required_evidence": "árvore encerrada e quarentena",
+      "executed": false
+    },
+    {
+      "id": "T11.02",
+      "mutation": "memory",
+      "expected_code": 16,
+      "mode": "external_blocked",
+      "positive_control": "external positive control required",
+      "required_evidence": "árvore encerrada e quarentena",
+      "executed": false
+    },
+    {
+      "id": "T11.03",
+      "mutation": "disk",
+      "expected_code": 16,
+      "mode": "external_blocked",
+      "positive_control": "external positive control required",
+      "required_evidence": "árvore encerrada e quarentena",
+      "executed": false
+    },
+    {
+      "id": "T11.04",
+      "mutation": "file_count",
+      "expected_code": 16,
+      "mode": "external_blocked",
+      "positive_control": "external positive control required",
+      "required_evidence": "árvore encerrada e quarentena",
+      "executed": false
+    },
+    {
+      "id": "T11.05",
+      "mutation": "resource_size",
+      "expected_code": 16,
+      "mode": "external_blocked",
+      "positive_control": "external positive control required",
+      "required_evidence": "árvore encerrada e quarentena",
+      "executed": false
+    },
+    {
+      "id": "T11.06",
+      "mutation": "heartbeat_loss",
+      "expected_code": 16,
+      "mode": "external_blocked",
+      "positive_control": "external positive control required",
+      "required_evidence": "árvore encerrada e quarentena",
+      "executed": false
+    },
+    {
+      "id": "T12.01",
+      "mutation": "literal",
+      "expected_code": 15,
+      "mode": "in_memory",
+      "positive_control": "same fixture without mutation",
+      "required_evidence": "mutação rejeitada",
+      "executed": false
+    },
+    {
+      "id": "T12.02",
+      "mutation": "opcode",
+      "expected_code": 15,
+      "mode": "in_memory",
+      "positive_control": "same fixture without mutation",
+      "required_evidence": "mutação rejeitada",
+      "executed": false
+    },
+    {
+      "id": "T12.03",
+      "mutation": "token",
+      "expected_code": 15,
+      "mode": "in_memory",
+      "positive_control": "same fixture without mutation",
+      "required_evidence": "mutação rejeitada",
+      "executed": false
+    },
+    {
+      "id": "T12.04",
+      "mutation": "signature",
+      "expected_code": 15,
+      "mode": "in_memory",
+      "positive_control": "same fixture without mutation",
+      "required_evidence": "mutação rejeitada",
+      "executed": false
+    },
+    {
+      "id": "T12.05",
+      "mutation": "swapped_link",
+      "expected_code": 15,
+      "mode": "in_memory",
+      "positive_control": "same fixture without mutation",
+      "required_evidence": "mutação rejeitada",
+      "executed": false
+    },
+    {
+      "id": "T13.01",
+      "mutation": "missing_gate",
+      "expected_code": 17,
+      "mode": "in_memory",
+      "positive_control": "same fixture without mutation",
+      "required_evidence": "sem início ou interrupção e quarentena",
+      "executed": false
+    },
+    {
+      "id": "T13.02",
+      "mutation": "expired",
+      "expected_code": 17,
+      "mode": "in_memory",
+      "positive_control": "same fixture without mutation",
+      "required_evidence": "sem início ou interrupção e quarentena",
+      "executed": false
+    },
+    {
+      "id": "T13.03",
+      "mutation": "wrong_authority",
+      "expected_code": 17,
+      "mode": "in_memory",
+      "positive_control": "same fixture without mutation",
+      "required_evidence": "sem início ou interrupção e quarentena",
+      "executed": false
+    },
+    {
+      "id": "T13.04",
+      "mutation": "wrong_scope",
+      "expected_code": 17,
+      "mode": "in_memory",
+      "positive_control": "same fixture without mutation",
+      "required_evidence": "sem início ou interrupção e quarentena",
+      "executed": false
+    },
+    {
+      "id": "T13.05",
+      "mutation": "revoked_before",
+      "expected_code": 17,
+      "mode": "in_memory",
+      "positive_control": "same fixture without mutation",
+      "required_evidence": "sem início ou interrupção e quarentena",
+      "executed": false
+    },
+    {
+      "id": "T13.06",
+      "mutation": "revoked_during",
+      "expected_code": 17,
+      "mode": "external_blocked",
+      "positive_control": "external positive control required",
+      "required_evidence": "sem início ou interrupção e quarentena",
+      "executed": false
+    },
+    {
+      "id": "T13.07",
+      "mutation": "rollback",
+      "expected_code": 17,
+      "mode": "in_memory",
+      "positive_control": "same fixture without mutation",
+      "required_evidence": "sem início ou interrupção e quarentena",
+      "executed": false
+    },
+    {
+      "id": "T13.08",
+      "mutation": "changed_evidence",
+      "expected_code": 17,
+      "mode": "in_memory",
+      "positive_control": "same fixture without mutation",
+      "required_evidence": "sem início ou interrupção e quarentena",
+      "executed": false
+    },
+    {
+      "id": "T14.01",
+      "mutation": "shared_component",
+      "expected_code": 18,
+      "mode": "in_memory",
+      "positive_control": "same fixture without mutation",
+      "required_evidence": "alegação rejeitada",
+      "executed": false
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "stage": "DC00.2-P-C",
+  "parent": "99d2ba21be7b43521f0af942b03c9e233ae07e70",
+  "original_files_preserved": 23,
+  "catalog_cases": 57,
+  "in_memory_cases": 28,
+  "external_blocked_cases": 29,
+  "tests_executed": 0,
+  "source_compiled": false,
+  "target_access": false,
+  "homologated": false,
+  "limitations": [
+    "data units not operational tests",
+    "gate snapshots not authenticated decisions",
+    "manifest verification primitive not integrated end-to-end",
+    "tiny IL subset only; no EH",
+    "external containment not provisioned",
+    "transitive dependency lock pending"
+  ]
+}
