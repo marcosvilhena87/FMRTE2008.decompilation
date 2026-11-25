@@ -1,0 +1,20 @@
+{
+  "source_hashes_verified": 9,
+  "baseline_zip_members": 23,
+  "baseline_manifest_entries": 22,
+  "clr_tables": 28,
+  "clr_records": 6616,
+  "python_ast_parsed": 2,
+  "json_parsed_before_report": 16,
+  "schemas": 8,
+  "method_pair_fixtures": 15,
+  "nominal_cases": 16,
+  "atomic_catalog_cases": 57,
+  "tests_executed": 0,
+  "target_read": false,
+  "target_executed": false,
+  "decompiled": false,
+  "repositories_modified": false,
+  "operational_controls_provisioned": false,
+  "status": "preparatory core delivered; integration outstanding"
+}

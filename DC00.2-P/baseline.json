@@ -1,0 +1,185 @@
+{
+  "sources": {
+    "DC00.1-protocolo.md": "a0bd86d483cb232278e18f89eb2f80c1d317681aa9561a2c4e9864c3ad367fd3",
+    "DC00.1-R-parecer.md": "6a3555e82609dc40f0bf8a080b8d2f42af6aaa498514822b874d9e8f74c67236",
+    "DC00.1-R1-protocolo-v2.md": "ea7df8d0c181e398dbaf6eb8a2313f101f4d153c76c461b5d038d73323fd2f54",
+    "DC00.1-R1-matriz.json": "03366cf5ff7d9621a2d27363199cd2e6feffe7ceb44417a6adfad277624e47b0",
+    "DC00.1-R2-parecer.md": "9714219f9f12299c6feada2ef75074bafa8b7cac0a398ad62bc24c6e37d2c292",
+    "OR00.7-dossie.zip": "5d83babc1746495c5032eebd9358b3314b7b9b6578e493caaf510f1927299fcc",
+    "DC00.1-R3-protocolo-v3.md": "e4fe6fac6462e1f2ca9a0cac1dc53366c398ed8e4c8c60e97a4071f8531906db",
+    "DC00.1-R3-matriz.json": "5e08533492160e8db1722aaa207982e39fea589a64a5b92fa9ca8f62444f2021",
+    "DC00.1-R4-parecer.md": "34b5a08e706b58b0632f515777cd2bc410aa004b3ee8fcaa74893903f21a88e6"
+  },
+  "coverage": {
+    "tables": [
+      {
+        "name": "Module",
+        "table_id": 0,
+        "count": 1
+      },
+      {
+        "name": "TypeRef",
+        "table_id": 1,
+        "count": 264
+      },
+      {
+        "name": "TypeDef",
+        "table_id": 2,
+        "count": 100
+      },
+      {
+        "name": "Field",
+        "table_id": 4,
+        "count": 1554
+      },
+      {
+        "name": "MethodDef",
+        "table_id": 6,
+        "count": 1421
+      },
+      {
+        "name": "Param",
+        "table_id": 8,
+        "count": 1280
+      },
+      {
+        "name": "InterfaceImpl",
+        "table_id": 9,
+        "count": 5
+      },
+      {
+        "name": "MemberRef",
+        "table_id": 10,
+        "count": 703
+      },
+      {
+        "name": "Constant",
+        "table_id": 11,
+        "count": 69
+      },
+      {
+        "name": "CustomAttribute",
+        "table_id": 12,
+        "count": 26
+      },
+      {
+        "name": "FieldMarshal",
+        "table_id": 13,
+        "count": 1
+      },
+      {
+        "name": "ClassLayout",
+        "table_id": 15,
+        "count": 2
+      },
+      {
+        "name": "FieldLayout",
+        "table_id": 16,
+        "count": 3
+      },
+      {
+        "name": "StandAloneSig",
+        "table_id": 17,
+        "count": 158
+      },
+      {
+        "name": "EventMap",
+        "table_id": 18,
+        "count": 3
+      },
+      {
+        "name": "Event",
+        "table_id": 20,
+        "count": 8
+      },
+      {
+        "name": "PropertyMap",
+        "table_id": 21,
+        "count": 35
+      },
+      {
+        "name": "Property",
+        "table_id": 23,
+        "count": 301
+      },
+      {
+        "name": "MethodSemantics",
+        "table_id": 24,
+        "count": 597
+      },
+      {
+        "name": "ModuleRef",
+        "table_id": 26,
+        "count": 2
+      },
+      {
+        "name": "TypeSpec",
+        "table_id": 27,
+        "count": 18
+      },
+      {
+        "name": "ImplMap",
+        "table_id": 28,
+        "count": 6
+      },
+      {
+        "name": "Assembly",
+        "table_id": 32,
+        "count": 1
+      },
+      {
+        "name": "AssemblyRef",
+        "table_id": 35,
+        "count": 5
+      },
+      {
+        "name": "ManifestResource",
+        "table_id": 40,
+        "count": 21
+      },
+      {
+        "name": "NestedClass",
+        "table_id": 41,
+        "count": 27
+      },
+      {
+        "name": "GenericParam",
+        "table_id": 42,
+        "count": 4
+      },
+      {
+        "name": "MethodSpec",
+        "table_id": 43,
+        "count": 1
+      }
+    ],
+    "total": 6616
+  },
+  "gates": {
+    "G01": "documental",
+    "G02": "conditional",
+    "G03": "pending",
+    "G04": "pending",
+    "G05": "partial",
+    "G06": "pending"
+  },
+  "risks": {
+    "R01": "open",
+    "R02": "open",
+    "R03": "open",
+    "R04": "open",
+    "R05": "conditional_closed",
+    "R06": "open",
+    "R07": "open"
+  },
+  "R05_limitations": [
+    "MVID",
+    "streams/version",
+    "Windows version resources",
+    "individual P/Invoke",
+    "entry identity/signature",
+    "public key tokens",
+    "other PE/CLR fields"
+  ],
+  "target_access": false
+}

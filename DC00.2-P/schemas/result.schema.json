@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4096
+    },
+    "observed_code": {
+      "enum": [
+        0,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        99
+      ]
+    },
+    "forbidden_effect": {
+      "type": "boolean"
+    },
+    "concurrent": {
+      "type": "boolean"
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 240
+          },
+          "size": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "required": [
+          "path",
+          "size",
+          "sha256"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 10000
+    }
+  },
+  "required": [
+    "case_id",
+    "observed_code",
+    "forbidden_effect",
+    "concurrent",
+    "evidence"
+  ],
+  "additionalProperties": false
+}

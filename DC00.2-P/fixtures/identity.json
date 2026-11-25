@@ -1,0 +1,10 @@
+{
+  "origin": "dados declarativos originais gerados para DC00.2-P",
+  "contains_target": false,
+  "contains_executable": false,
+  "files": {
+    "method-pairs.json": "fd71f70f6be60abfcbd2cbc00a1a7c006e2761559925159c3a34259c34ea8873",
+    "rows.json": "33521db55f2605865f28258278a2d4116b7de03ec034e78ec593192231e55bbe",
+    "opaque.txt": "99d6c4cad144881be4d15bda21396e4a34de42c28d6523ec69ca68f0c711fff3"
+  }
+}

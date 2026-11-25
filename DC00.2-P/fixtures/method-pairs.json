@@ -1,0 +1,77 @@
+[
+  {
+    "body": "present",
+    "il": "complete",
+    "expected_valid": true
+  },
+  {
+    "body": "present",
+    "il": "partial",
+    "expected_valid": true
+  },
+  {
+    "body": "present",
+    "il": "failed",
+    "expected_valid": true
+  },
+  {
+    "body": "present",
+    "il": "pending",
+    "expected_valid": true
+  },
+  {
+    "body": "present",
+    "il": "na",
+    "expected_valid": false
+  },
+  {
+    "body": "absent",
+    "il": "complete",
+    "expected_valid": false
+  },
+  {
+    "body": "absent",
+    "il": "partial",
+    "expected_valid": false
+  },
+  {
+    "body": "absent",
+    "il": "failed",
+    "expected_valid": false
+  },
+  {
+    "body": "absent",
+    "il": "pending",
+    "expected_valid": false
+  },
+  {
+    "body": "absent",
+    "il": "na",
+    "expected_valid": true
+  },
+  {
+    "body": "unknown",
+    "il": "complete",
+    "expected_valid": false
+  },
+  {
+    "body": "unknown",
+    "il": "partial",
+    "expected_valid": false
+  },
+  {
+    "body": "unknown",
+    "il": "failed",
+    "expected_valid": true
+  },
+  {
+    "body": "unknown",
+    "il": "pending",
+    "expected_valid": true
+  },
+  {
+    "body": "unknown",
+    "il": "na",
+    "expected_valid": false
+  }
+]
