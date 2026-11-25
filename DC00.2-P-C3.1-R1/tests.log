@@ -1,0 +1,14 @@
+test_code_15_requires_validator_rejection_for_signature (test_revision.RevisionTests.test_code_15_requires_validator_rejection_for_signature) ... ok
+test_every_trace_field_and_reason_is_checked (test_revision.RevisionTests.test_every_trace_field_and_reason_is_checked) ... ok
+test_joint_resigning_cannot_move_manifest_anchor (test_revision.RevisionTests.test_joint_resigning_cannot_move_manifest_anchor) ... ok
+test_observed_dependency_drift_keeps_trusted_inventory (test_revision.RevisionTests.test_observed_dependency_drift_keeps_trusted_inventory) ... ok
+test_priority_and_same_code_do_not_hide_concurrency (test_revision.RevisionTests.test_priority_and_same_code_do_not_hide_concurrency) ... ok
+test_registration_probe_fails_closed (test_revision.RevisionTests.test_registration_probe_fails_closed) ... ok
+test_runner_audit_and_exit_status (test_revision.RevisionTests.test_runner_audit_and_exit_status) ... ok
+test_source_drift_cannot_move_trusted_extent_or_digest (test_revision.RevisionTests.test_source_drift_cannot_move_trusted_extent_or_digest) ... ok
+test_transitive_shared_reader_and_coverage (test_revision.RevisionTests.test_transitive_shared_reader_and_coverage) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.904s
+
+OK

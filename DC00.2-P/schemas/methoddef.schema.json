@@ -1,0 +1,159 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "module": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4096
+    },
+    "rid": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 16777215
+    },
+    "owner": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4096
+    },
+    "signature": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4096
+    },
+    "body": {
+      "enum": [
+        "present",
+        "absent",
+        "unknown"
+      ]
+    },
+    "il": {
+      "enum": [
+        "complete",
+        "partial",
+        "failed",
+        "pending",
+        "na"
+      ]
+    },
+    "csharp": {
+      "enum": [
+        "direct",
+        "transformed",
+        "partial",
+        "failed",
+        "pending",
+        "na"
+      ]
+    },
+    "absence": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "il_path": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "il_sha256": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 240
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "start": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "end": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "encoding": {
+            "enum": [
+              "utf-8"
+            ]
+          },
+          "owner": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096
+          },
+          "signature": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096
+          },
+          "kind": {
+            "enum": [
+              "direct",
+              "transformed"
+            ]
+          },
+          "engine_evidence": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "required": [
+          "path",
+          "sha256",
+          "start",
+          "end",
+          "encoding",
+          "owner",
+          "signature",
+          "kind",
+          "engine_evidence"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 10000
+    },
+    "csharp_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "module",
+    "rid",
+    "owner",
+    "signature",
+    "body",
+    "il",
+    "csharp",
+    "absence",
+    "il_path",
+    "il_sha256",
+    "links",
+    "csharp_reason"
+  ],
+  "additionalProperties": false
+}

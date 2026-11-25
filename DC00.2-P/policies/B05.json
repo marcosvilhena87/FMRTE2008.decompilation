@@ -1,0 +1,20 @@
+{
+  "status": "not_provisioned",
+  "required_external_controls": [
+    "native_execution_denied",
+    "managed_execution_denied",
+    "children_denied",
+    "network_denied",
+    "external_heartbeat",
+    "tree_termination",
+    "quarantine"
+  ],
+  "operational_start_allowed": false,
+  "limits": {
+    "seconds": 300,
+    "memory_bytes": 2147483648,
+    "output_bytes": 1073741824,
+    "files": 10000,
+    "resource_bytes": 67108864
+  }
+}

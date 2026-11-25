@@ -1,0 +1,22 @@
+{
+  "status": "not_provisioned",
+  "required_external_controls": [
+    "os_write_denial",
+    "read_only_input",
+    "read_only_tools",
+    "temporary_output_confined",
+    "host_write_denied",
+    "direct_write_sentinels",
+    "quota",
+    "freeze_before_export",
+    "no_reparse_points"
+  ],
+  "operational_start_allowed": false,
+  "limits": {
+    "seconds": 300,
+    "memory_bytes": 2147483648,
+    "output_bytes": 1073741824,
+    "files": 10000,
+    "resource_bytes": 67108864
+  }
+}

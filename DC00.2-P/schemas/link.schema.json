@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "path": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 240
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "start": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "end": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "encoding": {
+      "enum": [
+        "utf-8"
+      ]
+    },
+    "owner": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4096
+    },
+    "signature": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4096
+    },
+    "kind": {
+      "enum": [
+        "direct",
+        "transformed"
+      ]
+    },
+    "engine_evidence": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  },
+  "required": [
+    "path",
+    "sha256",
+    "start",
+    "end",
+    "encoding",
+    "owner",
+    "signature",
+    "kind",
+    "engine_evidence"
+  ],
+  "additionalProperties": false
+}

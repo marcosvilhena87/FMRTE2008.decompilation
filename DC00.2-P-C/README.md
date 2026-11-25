@@ -1,0 +1,5 @@
+# DC00.2-P-C — complemento preparatório
+Preserva os 23 arquivos do checkpoint anterior. Nenhum alvo, binário, compilação, descompilação, CI ou lançador de processos. Nenhum teste funcional executado nesta publicação.
+O harness é uma biblioteca sem CLI: materializa casos de dados em memória e controles positivos; exige uma autorização futura específica antes de qualquer uso de avaliação. Casos operacionais são bloqueados, não simulados como aprovação. T13.06 também depende de observação externa ao longo da execução.
+Os contratos externos descrevem evidências necessárias, não implementam contenção real. O parser IL é restrito a fixtures de corpos tiny com opcodes explicitamente suportados; fat headers, EH, resolução de tokens e demais opcodes permanecem bloqueados. Nenhuma alegação de completude CLR/IL. O código C# é original, não compilado, e não constitui mapa de tokens real.
+A função operacional original continua incondicionalmente bloqueada. A âncora de evidência e o inventário de dependências precisam de confiança externa; nenhuma chave real provisionada. Não há workflow automático.

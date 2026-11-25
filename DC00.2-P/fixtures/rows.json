@@ -1,0 +1,17 @@
+[
+  {
+    "module": "synthetic",
+    "table_id": 6,
+    "rid": 1
+  },
+  {
+    "module": "synthetic",
+    "table_id": 6,
+    "rid": 2
+  },
+  {
+    "module": "synthetic",
+    "table_id": 6,
+    "rid": 3
+  }
+]

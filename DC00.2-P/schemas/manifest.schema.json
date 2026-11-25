@@ -1,0 +1,246 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "enum": [
+        3
+      ]
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4096
+    },
+    "baseline_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "commit": {
+      "type": "null"
+    },
+    "scope": {
+      "enum": [
+        "synthetic_homologation"
+      ]
+    },
+    "module": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4096
+    },
+    "toolchain_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "parameters": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 4096
+      },
+      "maxItems": 10000
+    },
+    "environment": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4096
+    },
+    "snapshot": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4096
+    },
+    "limits": {
+      "type": "object",
+      "properties": {
+        "seconds": {
+          "enum": [
+            300
+          ]
+        },
+        "memory_bytes": {
+          "enum": [
+            2147483648
+          ]
+        },
+        "output_bytes": {
+          "enum": [
+            1073741824
+          ]
+        },
+        "files": {
+          "enum": [
+            10000
+          ]
+        },
+        "resource_bytes": {
+          "enum": [
+            67108864
+          ]
+        }
+      },
+      "required": [
+        "seconds",
+        "memory_bytes",
+        "output_bytes",
+        "files",
+        "resource_bytes"
+      ],
+      "additionalProperties": false
+    },
+    "gate_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 4096
+      },
+      "maxItems": 10000
+    },
+    "started_utc": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "Z$"
+    },
+    "ended_utc": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "Z$"
+    },
+    "elapsed_ms": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "exit_code": {
+      "enum": [
+        0,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        99
+      ]
+    },
+    "logs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 240
+          },
+          "size": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "required": [
+          "path",
+          "size",
+          "sha256"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 10000
+    },
+    "inputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 240
+          },
+          "size": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "required": [
+          "path",
+          "size",
+          "sha256"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 10000
+    },
+    "outputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 240
+          },
+          "size": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "required": [
+          "path",
+          "size",
+          "sha256"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 10000
+    },
+    "status": {
+      "enum": [
+        "complete",
+        "blocked",
+        "quarantine"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "run_id",
+    "baseline_sha256",
+    "commit",
+    "scope",
+    "module",
+    "toolchain_sha256",
+    "parameters",
+    "environment",
+    "snapshot",
+    "limits",
+    "gate_refs",
+    "started_utc",
+    "ended_utc",
+    "elapsed_ms",
+    "exit_code",
+    "logs",
+    "inputs",
+    "outputs",
+    "status"
+  ],
+  "additionalProperties": false
+}

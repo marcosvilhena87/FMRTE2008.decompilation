@@ -1,0 +1,1015 @@
+{
+  "precedence": [
+    14,
+    16,
+    17,
+    10,
+    12,
+    13,
+    11,
+    15,
+    18,
+    99
+  ],
+  "concurrent_failure_pass": false,
+  "unexpected_99_pass": false,
+  "cases": [
+    {
+      "id": "T01.01",
+      "parent": "T01",
+      "mutation": "byte_changed",
+      "expected_code": 10,
+      "oracle": "hash externo e contador de chamadas ao parser",
+      "required_evidence": "zero chamadas ao parser",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution"
+      ],
+      "operational": false,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T02.01",
+      "parent": "T02",
+      "mutation": "missing_rid",
+      "expected_code": 11,
+      "oracle": "universo independente",
+      "required_evidence": "diferença exata de conjuntos",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution"
+      ],
+      "operational": false,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T02.02",
+      "parent": "T02",
+      "mutation": "unexpected_rid",
+      "expected_code": 11,
+      "oracle": "universo independente",
+      "required_evidence": "diferença exata de conjuntos",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution"
+      ],
+      "operational": false,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T03.01",
+      "parent": "T03",
+      "mutation": "duplicate_replaces_rid",
+      "expected_code": 11,
+      "oracle": "multiconjunto independente",
+      "required_evidence": "duplicata e omissão",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution"
+      ],
+      "operational": false,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T04.01",
+      "parent": "T04",
+      "mutation": "truncated_output_rehashed",
+      "expected_code": 12,
+      "oracle": "estrutura e comprimentos externos",
+      "required_evidence": "rejeição apesar do hash coerente",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution"
+      ],
+      "operational": false,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T05.01",
+      "parent": "T05",
+      "mutation": "missing_dependency",
+      "expected_code": 13,
+      "oracle": "inventário autenticado",
+      "required_evidence": "sem fallback nem rede",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution"
+      ],
+      "operational": false,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T05.02",
+      "parent": "T05",
+      "mutation": "wrong_identity_same_name",
+      "expected_code": 13,
+      "oracle": "inventário autenticado",
+      "required_evidence": "sem fallback nem rede",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution"
+      ],
+      "operational": false,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T06.01",
+      "parent": "T06",
+      "mutation": "forged_approval",
+      "expected_code": 12,
+      "oracle": "recomputação e âncora externa",
+      "required_evidence": "cada mutação rejeitada",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution"
+      ],
+      "operational": false,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T06.02",
+      "parent": "T06",
+      "mutation": "joint_replacement",
+      "expected_code": 12,
+      "oracle": "recomputação e âncora externa",
+      "required_evidence": "cada mutação rejeitada",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution"
+      ],
+      "operational": false,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T06.03",
+      "parent": "T06",
+      "mutation": "duplicate_json_key",
+      "expected_code": 12,
+      "oracle": "recomputação e âncora externa",
+      "required_evidence": "cada mutação rejeitada",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution"
+      ],
+      "operational": false,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T06.04",
+      "parent": "T06",
+      "mutation": "broken_reference",
+      "expected_code": 12,
+      "oracle": "recomputação e âncora externa",
+      "required_evidence": "cada mutação rejeitada",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution"
+      ],
+      "operational": false,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T07.01",
+      "parent": "T07",
+      "mutation": "absolute",
+      "expected_code": 14,
+      "oracle": "política efetiva e sentinelas externas",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution",
+        "external containment and monitor verified"
+      ],
+      "operational": true,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T07.02",
+      "parent": "T07",
+      "mutation": "unc",
+      "expected_code": 14,
+      "oracle": "política efetiva e sentinelas externas",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution",
+        "external containment and monitor verified"
+      ],
+      "operational": true,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T07.03",
+      "parent": "T07",
+      "mutation": "drive_relative",
+      "expected_code": 14,
+      "oracle": "política efetiva e sentinelas externas",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution",
+        "external containment and monitor verified"
+      ],
+      "operational": true,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T07.04",
+      "parent": "T07",
+      "mutation": "ads",
+      "expected_code": 14,
+      "oracle": "política efetiva e sentinelas externas",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution",
+        "external containment and monitor verified"
+      ],
+      "operational": true,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T07.05",
+      "parent": "T07",
+      "mutation": "nul",
+      "expected_code": 14,
+      "oracle": "política efetiva e sentinelas externas",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution",
+        "external containment and monitor verified"
+      ],
+      "operational": true,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T07.06",
+      "parent": "T07",
+      "mutation": "invalid_character",
+      "expected_code": 14,
+      "oracle": "política efetiva e sentinelas externas",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution",
+        "external containment and monitor verified"
+      ],
+      "operational": true,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T07.07",
+      "parent": "T07",
+      "mutation": "parent",
+      "expected_code": 14,
+      "oracle": "política efetiva e sentinelas externas",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution",
+        "external containment and monitor verified"
+      ],
+      "operational": true,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T07.08",
+      "parent": "T07",
+      "mutation": "reserved",
+      "expected_code": 14,
+      "oracle": "política efetiva e sentinelas externas",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution",
+        "external containment and monitor verified"
+      ],
+      "operational": true,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T07.09",
+      "parent": "T07",
+      "mutation": "trailing_dot",
+      "expected_code": 14,
+      "oracle": "política efetiva e sentinelas externas",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution",
+        "external containment and monitor verified"
+      ],
+      "operational": true,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T07.10",
+      "parent": "T07",
+      "mutation": "trailing_space",
+      "expected_code": 14,
+      "oracle": "política efetiva e sentinelas externas",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution",
+        "external containment and monitor verified"
+      ],
+      "operational": true,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T07.11",
+      "parent": "T07",
+      "mutation": "case_collision",
+      "expected_code": 14,
+      "oracle": "política efetiva e sentinelas externas",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution",
+        "external containment and monitor verified"
+      ],
+      "operational": true,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T07.12",
+      "parent": "T07",
+      "mutation": "unicode_collision",
+      "expected_code": 14,
+      "oracle": "política efetiva e sentinelas externas",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution",
+        "external containment and monitor verified"
+      ],
+      "operational": true,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T07.13",
+      "parent": "T07",
+      "mutation": "symlink",
+      "expected_code": 14,
+      "oracle": "política efetiva e sentinelas externas",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution",
+        "external containment and monitor verified"
+      ],
+      "operational": true,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T07.14",
+      "parent": "T07",
+      "mutation": "reparse_point",
+      "expected_code": 14,
+      "oracle": "política efetiva e sentinelas externas",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution",
+        "external containment and monitor verified"
+      ],
+      "operational": true,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T07.15",
+      "parent": "T07",
+      "mutation": "overwrite",
+      "expected_code": 14,
+      "oracle": "política efetiva e sentinelas externas",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution",
+        "external containment and monitor verified"
+      ],
+      "operational": true,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T07.16",
+      "parent": "T07",
+      "mutation": "direct_write",
+      "expected_code": 14,
+      "oracle": "política efetiva e sentinelas externas",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution",
+        "external containment and monitor verified"
+      ],
+      "operational": true,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T07.17",
+      "parent": "T07",
+      "mutation": "native_execution",
+      "expected_code": 14,
+      "oracle": "política efetiva e sentinelas externas",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution",
+        "external containment and monitor verified"
+      ],
+      "operational": true,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T07.18",
+      "parent": "T07",
+      "mutation": "managed_execution",
+      "expected_code": 14,
+      "oracle": "política efetiva e sentinelas externas",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution",
+        "external containment and monitor verified"
+      ],
+      "operational": true,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T07.19",
+      "parent": "T07",
+      "mutation": "child_process",
+      "expected_code": 14,
+      "oracle": "política efetiva e sentinelas externas",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution",
+        "external containment and monitor verified"
+      ],
+      "operational": true,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T07.20",
+      "parent": "T07",
+      "mutation": "network",
+      "expected_code": 14,
+      "oracle": "política efetiva e sentinelas externas",
+      "required_evidence": "negação antes do efeito; sentinelas intactas",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution",
+        "external containment and monitor verified"
+      ],
+      "operational": true,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T08.01",
+      "parent": "T08",
+      "mutation": "nonvolatile_change",
+      "expected_code": 15,
+      "oracle": "brutos e projeção permitida",
+      "required_evidence": "ambas preservadas",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution"
+      ],
+      "operational": false,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T08.02",
+      "parent": "T08",
+      "mutation": "nested_homonym_change",
+      "expected_code": 15,
+      "oracle": "brutos e projeção permitida",
+      "required_evidence": "ambas preservadas",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution"
+      ],
+      "operational": false,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T09-A.01",
+      "parent": "T09-A",
+      "mutation": "protected_write",
+      "expected_code": 14,
+      "oracle": "ACL e sentinela",
+      "required_evidence": "negação e hash intacto",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution",
+        "external containment and monitor verified"
+      ],
+      "operational": true,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T09-B.01",
+      "parent": "T09-B",
+      "mutation": "changed_hash",
+      "expected_code": 10,
+      "oracle": "hash inicial externo",
+      "required_evidence": "incidente detectado",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution"
+      ],
+      "operational": false,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T10-A.01",
+      "parent": "T10-A",
+      "mutation": "opaque_read",
+      "expected_code": 0,
+      "oracle": "bytes e hash de origem",
+      "required_evidence": "bytes idênticos sem desserialização",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution"
+      ],
+      "operational": false,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T10-B.01",
+      "parent": "T10-B",
+      "mutation": "deserialize_request",
+      "expected_code": 14,
+      "oracle": "política preventiva e monitor",
+      "required_evidence": "operação não iniciada",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution",
+        "external containment and monitor verified"
+      ],
+      "operational": true,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T11.01",
+      "parent": "T11",
+      "mutation": "time",
+      "expected_code": 16,
+      "oracle": "limites e monitor externo",
+      "required_evidence": "árvore encerrada e quarentena",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution",
+        "external containment and monitor verified"
+      ],
+      "operational": true,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T11.02",
+      "parent": "T11",
+      "mutation": "memory",
+      "expected_code": 16,
+      "oracle": "limites e monitor externo",
+      "required_evidence": "árvore encerrada e quarentena",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution",
+        "external containment and monitor verified"
+      ],
+      "operational": true,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T11.03",
+      "parent": "T11",
+      "mutation": "disk",
+      "expected_code": 16,
+      "oracle": "limites e monitor externo",
+      "required_evidence": "árvore encerrada e quarentena",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution",
+        "external containment and monitor verified"
+      ],
+      "operational": true,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T11.04",
+      "parent": "T11",
+      "mutation": "file_count",
+      "expected_code": 16,
+      "oracle": "limites e monitor externo",
+      "required_evidence": "árvore encerrada e quarentena",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution",
+        "external containment and monitor verified"
+      ],
+      "operational": true,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T11.05",
+      "parent": "T11",
+      "mutation": "resource_size",
+      "expected_code": 16,
+      "oracle": "limites e monitor externo",
+      "required_evidence": "árvore encerrada e quarentena",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution",
+        "external containment and monitor verified"
+      ],
+      "operational": true,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T11.06",
+      "parent": "T11",
+      "mutation": "heartbeat_loss",
+      "expected_code": 16,
+      "oracle": "limites e monitor externo",
+      "required_evidence": "árvore encerrada e quarentena",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution",
+        "external containment and monitor verified"
+      ],
+      "operational": true,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T12.01",
+      "parent": "T12",
+      "mutation": "literal",
+      "expected_code": 15,
+      "oracle": "oráculo lexical/estrutural e identidade",
+      "required_evidence": "mutação rejeitada",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution"
+      ],
+      "operational": false,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T12.02",
+      "parent": "T12",
+      "mutation": "opcode",
+      "expected_code": 15,
+      "oracle": "oráculo lexical/estrutural e identidade",
+      "required_evidence": "mutação rejeitada",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution"
+      ],
+      "operational": false,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T12.03",
+      "parent": "T12",
+      "mutation": "token",
+      "expected_code": 15,
+      "oracle": "oráculo lexical/estrutural e identidade",
+      "required_evidence": "mutação rejeitada",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution"
+      ],
+      "operational": false,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T12.04",
+      "parent": "T12",
+      "mutation": "signature",
+      "expected_code": 15,
+      "oracle": "oráculo lexical/estrutural e identidade",
+      "required_evidence": "mutação rejeitada",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution"
+      ],
+      "operational": false,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T12.05",
+      "parent": "T12",
+      "mutation": "swapped_link",
+      "expected_code": 15,
+      "oracle": "oráculo lexical/estrutural e identidade",
+      "required_evidence": "mutação rejeitada",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution"
+      ],
+      "operational": false,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T13.01",
+      "parent": "T13",
+      "mutation": "missing_gate",
+      "expected_code": 17,
+      "oracle": "registro externo e relógio confiável",
+      "required_evidence": "sem início ou interrupção e quarentena",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution"
+      ],
+      "operational": false,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T13.02",
+      "parent": "T13",
+      "mutation": "expired",
+      "expected_code": 17,
+      "oracle": "registro externo e relógio confiável",
+      "required_evidence": "sem início ou interrupção e quarentena",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution"
+      ],
+      "operational": false,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T13.03",
+      "parent": "T13",
+      "mutation": "wrong_authority",
+      "expected_code": 17,
+      "oracle": "registro externo e relógio confiável",
+      "required_evidence": "sem início ou interrupção e quarentena",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution"
+      ],
+      "operational": false,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T13.04",
+      "parent": "T13",
+      "mutation": "wrong_scope",
+      "expected_code": 17,
+      "oracle": "registro externo e relógio confiável",
+      "required_evidence": "sem início ou interrupção e quarentena",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution"
+      ],
+      "operational": false,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T13.05",
+      "parent": "T13",
+      "mutation": "revoked_before",
+      "expected_code": 17,
+      "oracle": "registro externo e relógio confiável",
+      "required_evidence": "sem início ou interrupção e quarentena",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution"
+      ],
+      "operational": false,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T13.06",
+      "parent": "T13",
+      "mutation": "revoked_during",
+      "expected_code": 17,
+      "oracle": "registro externo e relógio confiável",
+      "required_evidence": "sem início ou interrupção e quarentena",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution"
+      ],
+      "operational": false,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T13.07",
+      "parent": "T13",
+      "mutation": "rollback",
+      "expected_code": 17,
+      "oracle": "registro externo e relógio confiável",
+      "required_evidence": "sem início ou interrupção e quarentena",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution"
+      ],
+      "operational": false,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T13.08",
+      "parent": "T13",
+      "mutation": "changed_evidence",
+      "expected_code": 17,
+      "oracle": "registro externo e relógio confiável",
+      "required_evidence": "sem início ou interrupção e quarentena",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution"
+      ],
+      "operational": false,
+      "executed": false,
+      "status": "planned_not_run"
+    },
+    {
+      "id": "T14.01",
+      "parent": "T14",
+      "mutation": "shared_component",
+      "expected_code": 18,
+      "oracle": "grafo real e oráculo por propriedade",
+      "required_evidence": "alegação rejeitada",
+      "positive_control": "baseline synthetic valid, no forbidden effects",
+      "fixture_anchor_sha256": "c911bec718e56efdf7a83f71696e39d04e1e271a31dad4b9d0fc9cbe0ac481e2",
+      "preconditions": [
+        "specific DC00.2-H approval",
+        "independent oracle fixed before execution"
+      ],
+      "operational": false,
+      "executed": false,
+      "status": "planned_not_run"
+    }
+  ]
+}

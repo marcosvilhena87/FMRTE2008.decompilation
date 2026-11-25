@@ -1,0 +1,10 @@
+{
+  "algorithm": "Ed25519",
+  "signed_bytes": "ASCII DC00.2-v1 followed by NUL then exact UTF-8 payload bytes",
+  "public_key": null,
+  "trusted_clock": null,
+  "revocation_sequence_floor": null,
+  "key_rotation": "external authenticated replacement; invalidate prior approvals; no fallback",
+  "status": "not_provisioned",
+  "operational_start_allowed": false
+}

@@ -1,0 +1,12 @@
+{
+  "origin": "original synthetic source",
+  "compiled": false,
+  "expected_features": [
+    "abstract method without IL body",
+    "overloaded methods with distinct signatures",
+    "distinct methods with equal parameter shape",
+    "exception handling",
+    "generic type"
+  ],
+  "token_map": null
+}
